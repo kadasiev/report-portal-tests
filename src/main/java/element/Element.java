@@ -47,24 +47,22 @@ public class Element {
   }
 
   public void click() {
-    WebElement element = waitForVisibility();
-    element.click();
+    waitForVisibility().click();
 
     log.info("Clicked on element: {}", "\"" + by.toString() + "\"");
   }
 
   public void sendKeys(CharSequence... keys) {
-    WebElement element = waitForVisibility();
-    element.sendKeys(keys);
+    waitForVisibility().sendKeys(keys);
 
-    log.info("The value {} was entered into field: {}", Arrays.toString(keys), "\"" + by.toString() + "\"");
+    log.info("Value {} was entered into field: {}", Arrays.toString(keys), "\"" + by.toString() + "\"");
   }
 
-  public void clear() {
-    WebElement element = waitForVisibility();
-    element.clear();
+  public Element clear() {
+    waitForVisibility().clear();
 
-    log.info("The value was deleted from the field: {}", "\"" + by.toString() + "\"");
+    log.info("Value was deleted from field: {}", "\"" + by.toString() + "\"");
+    return this;
   }
 
   public void hoverOver() {

@@ -10,7 +10,7 @@
 <!--    </classes>-->
 
     <packages>
-      <package name="api.dashboard"/>
+<!--      <package name="api.dashboard"/>-->
       <package name="ui.widget"/>
     </packages>
 

@@ -11,14 +11,14 @@ public class LoginPage {
   private final Element loginButton = xpath("//*[@type = 'submit']");
 
   public LoginPage enterLogin(String login) {
-    loginField.clear();
-    loginField.sendKeys(login);
+    loginField.clear()
+        .sendKeys(login);
     return this;
   }
 
   public LoginPage enterPassword(String password) {
-    passwordField.clear();
-    passwordField.sendKeys(password);
+    passwordField.clear()
+        .sendKeys(password);
     return this;
   }
 

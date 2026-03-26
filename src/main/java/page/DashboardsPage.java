@@ -6,7 +6,7 @@ import element.Element;
 
 public class DashboardsPage {
 
-  private static final String DASHBOARD_PATTERN = "//*[contains(@class, 'gridCell') and text() = '%s']";
+  private static final String DASHBOARD_PATTERN = "//*[contains(@class, 'dashboardTable') and text() = '%s']";
   private static final String WIDGET_TYPE_PATTERN = "//*[contains(@class, 'widgetType') and text() = '%s']";
   private static final String WIDGET_PATTERN = "//*[contains(@class, 'widgetHeader') and text() = '%s']/ancestor::div[contains(@class, 'widget-container')]";
   private static final String WIDGET_DELETE_BUTTON = "//*[name()='svg']/*[name()='path' and contains(@d, 'M7')]";
@@ -49,8 +49,8 @@ public class DashboardsPage {
   }
 
   public DashboardsPage enterWidgetName(String widgetName) {
-    widgetNameField.clear();
-    widgetNameField.sendKeys(widgetName);
+    widgetNameField.clear()
+        .sendKeys(widgetName);
     return this;
   }
 

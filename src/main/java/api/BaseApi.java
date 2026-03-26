@@ -6,7 +6,7 @@ import io.restassured.RestAssured;
 
 public class BaseApi {
 
-  static  {
+  static {
     RestAssured.baseURI = getValue("baseURL");
   }
 }

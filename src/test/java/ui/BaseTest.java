@@ -1,8 +1,6 @@
 package ui;
 
-import static driver.DriverFactory.closeBrowser;
-import static driver.DriverFactory.openBrowser;
-
+import driver.DriverFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import step.DashboardsSteps;
@@ -16,12 +14,12 @@ public class BaseTest {
   protected NavigationSteps navigationSteps = new NavigationSteps();
 
   @BeforeMethod(groups = {"run"})
-  public void setUp() {
-    openBrowser();
+  public void openBrowser() {
+    DriverFactory.openBrowser();
   }
 
   @AfterMethod(groups = {"run"})
-  public void tearDown() {
-    closeBrowser();
+  public void closeBrowser() {
+    DriverFactory.closeBrowser();
   }
 }
